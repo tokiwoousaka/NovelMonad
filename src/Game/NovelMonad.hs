@@ -9,6 +9,7 @@ module Game.NovelMonad
   , talk
   , trunOverThePage
   , selectChoices
+  , getStrLn
   ) where
 import Control.Monad.Operational.Simple
 

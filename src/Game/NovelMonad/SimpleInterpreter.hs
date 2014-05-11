@@ -18,8 +18,8 @@ import Text.Read
 data Color = Red | Blue deriving (Show, Read, Eq)
 
 sex2Color :: SIConfig -> Sex -> Color
-sex2Color conf Girl = siGirlsColor $ conf
-sex2Color conf Boy = siBoysColor $ conf
+sex2Color conf Girl = siGirlsColor conf
+sex2Color conf Boy = siBoysColor conf
 
 -- config
 
@@ -64,7 +64,7 @@ colorling Red str = "\x1b[31m" ++ str ++ "\x1b[m"
 getChoices :: forall a. Choices a => SIConfig -> Novel () -> IO a
 getChoices conf question = do
   tlist <- return $ zip [0..] ([minBound..maxBound] :: [a])
-  --show
+  -- show
   runNovel conf question
   putStrLn "----------"
   forM_ tlist $ \(i, val) -> putStrLn (show i ++ " - " ++ showItem val)

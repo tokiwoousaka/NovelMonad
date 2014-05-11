@@ -3,13 +3,12 @@
 
 name:                novel-monad 
 version:             0.1.0.0
--- synopsis:            
--- description:         
+synopsis:            library for novel
+description:         Monad for novel game story by opelational monad.
 license:             MIT
 license-file:        LICENSE
 author:              tokiwoousaka
 maintainer:          its.out.of.tune.this.my.music@gmail.com
--- copyright:           
 category:            Game
 build-type:          Simple
 extra-source-files:  README.md
@@ -18,8 +17,6 @@ cabal-version:       >=1.10
 library
   exposed-modules:     Game.NovelMonad,
                        Game.NovelMonad.SimpleInterpreter
-  -- other-modules:       
-  -- other-extensions:    
   build-depends:       base >=4.6 && <4.7,
                        free-operational ==0.5.*
   hs-source-dirs:      src
